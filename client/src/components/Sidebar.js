@@ -9,21 +9,23 @@ const Sidebar = () =>{
             <div className="flex-col">
                 <img src={Logo} className="w-120 h-36 items-left -ml-8" alt="Logo"></img>
                 <ul className="flex flex-col items-left text-lg space-y-6">
-                    <div className="space-x-6 rounded-md px-6 py-3 hover:bg-yellow-400 hover:text-black">
-                        <FontAwesomeIcon icon={faDashboard} />
-                        <a src="">Dashboard</a>
-                    </div>
+                    <a href="#">
+                        <div className="space-x-6 rounded-md px-6 py-3 hover:bg-yellow-400 hover:text-black">
+                            <FontAwesomeIcon icon={faDashboard} />
+                            <span>Dashboard</span>
+                        </div>
+                    </a>
                     <div className="space-x-6 rounded-md px-6 py-3 hover:bg-yellow-500 hover:text-black">
                         <FontAwesomeIcon icon={faInbox} />
-                        <a src="">Inbox</a>
+                        <span>Inbox</span>
                     </div>
                     <div className="space-x-6 rounded-md px-6 py-3 hover:bg-yellow-500 hover:text-black">
                         <FontAwesomeIcon icon={faCalendar} />
-                        <a src="">Calender</a>
+                        <span>Calender</span>
                     </div>
                     <div className="space-x-6 rounded-md px-6 py-3 hover:bg-yellow-500 hover:text-black">
                         <FontAwesomeIcon icon={faBriefcase} />
-                        <a src="">Jobs</a>
+                        <span>Jobs</span>
                     </div>
                 </ul>
             </div>

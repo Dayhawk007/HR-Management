@@ -1,12 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Sidebar from "./components/Sidebar.js";
-import Jobs from './components/Jobs';
+import HomeScreen from './screens/HomeScreen';
 function App() {
   return (
     <>
-      <Sidebar/>
-      <Jobs/>
+      <HomeScreen/>
     </>
   );
 }
