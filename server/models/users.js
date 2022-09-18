@@ -5,11 +5,14 @@ const userSchema=mongoose.Schema(
         name: {
             type: String,
             required: true,
+            trim:true,
+            unique:true
         },
         email: {
             type: String,
             required: true,
-            unique: true
+            unique: true,
+            trim:true
         },
         password: {
             type: String,
@@ -22,7 +25,6 @@ const userSchema=mongoose.Schema(
         },
         profilePic:{
             type:String,
-            required:true,
             default:"https://static.vecteezy.com/system/resources/previews/001/840/618/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
         }
     },
