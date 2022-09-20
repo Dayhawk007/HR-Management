@@ -8,15 +8,17 @@ const jobSchema= mongoose.Schema({
     },
     designation:{
         type:String,
+        enum:["HR","Design","Development","Marketing"],
         required:true,
         trim:true
     },
     numberOfCandidates:{
         type:Number,
-        required:true,
+        default:0,
     },
     typeOfJob:{
         type:String,
+        enum:["Full time","Part time","Freelance","Internship"],
         required:true,
         trim:true
     },

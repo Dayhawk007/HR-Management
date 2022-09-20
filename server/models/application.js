@@ -9,12 +9,13 @@ const applicationSchema= mongoose.Schema({
         type:String,
         required:true,
     },
-    status:{
+    candidateStatus:{
         type: String,
         enum:["New","Screening","Testing","Interview","Hired","Rejected"],
-        required:true
+        required:true,
+        default:"New"
     },
-    details:{
+    detail:{
         type:String,
         required:true
     }

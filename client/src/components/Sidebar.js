@@ -12,7 +12,7 @@ const Sidebar = () =>{
     };
     return(
         <>
-            <div className={`hidden container py-3 space-y-2 px-6  bg-slate-800 text-white md:flex md:w-64 md:h-screen`}>
+            <div className={`hidden container py-3 space-y-2 px-6  bg-slate-800 text-white md:flex md:w-72 md:h-screen`}>
                 <div className="flex-col">
                     <img src={Logo} className="w-120 h-36 items-left -ml-8" alt="Logo"></img>
                     <ul className="flex flex-col items-left text-lg space-y-6">

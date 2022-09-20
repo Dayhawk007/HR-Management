@@ -9,13 +9,13 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import {rootReducer} from './reducers/root.js'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-//const store=createStore(rootReducer,composeWithDevTools());
+const store=createStore(rootReducer,composeWithDevTools());
 root.render(
-  //<Provider>
+  <Provider store={store}>
     <Router>
       <App />
     </Router>
-  //</Provider>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

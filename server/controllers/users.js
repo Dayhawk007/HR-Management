@@ -4,8 +4,12 @@ import bcrypt from 'bcrypt';
 import jwt from "jsonwebtoken";
 export const register = async (req,res) =>{
     try{
-    const {name,email,
-    password,isHR}=req.body;
+    const {first_name,
+        last_name,
+        name,
+        email,
+        password,
+        designation}=req.body;
     if(!validateEmail(email)){
         res.status(400).json({
             "error":"Invalid Email Address"
@@ -30,10 +34,12 @@ export const register = async (req,res) =>{
     }
     const cryptedPassword=await bcrypt.hash(password,12);
     const user= await new User({
+        first_name,
+        last_name,
         name,
         email,
         "password":cryptedPassword,
-        isHR
+        designation
     }).save();
     res.json(user);
     }

@@ -2,6 +2,16 @@ import mongoose from "mongoose";
 
 const userSchema=mongoose.Schema(
     {
+        first_name:{
+            type:String,
+            required:true,
+            trim:true
+        },
+        last_name:{
+            type:String,
+            required:true,
+            trim:true
+        },
         name: {
             type: String,
             required: true,
@@ -18,10 +28,10 @@ const userSchema=mongoose.Schema(
             type: String,
             required: true
         },
-        isHR: {
-            type: Boolean,
+        designation: {
+            type: String,
+            enum:["HR","Design","Development","Marketing"],
             required: true,
-            default: false
         },
         profilePic:{
             type:String,

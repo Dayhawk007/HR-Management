@@ -14,6 +14,7 @@ const CONNECTION_URL=process.env.MONGODB_URL;
 const PORT=process.env.PORT || 5000;
 app.use(bodyParser.json({extended:true}));
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.text({extended:true}));
 app.use(cors());
 
 app.use("/dashboard/",dashboard);
