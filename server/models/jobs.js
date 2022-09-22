@@ -27,11 +27,27 @@ const jobSchema= mongoose.Schema({
         required:true,
         trim:true
     },
-    Applications:{
-        type:Array,
-    },
+    applications:[
+        {type: mongoose.Schema.Types.ObjectId,ref:'appplications'}
+    ],
     datePosted:{
         type:Date,
+        required:true,
+    },
+    lastDate:{
+        type:Date,
+        required:true,
+    },
+    experience:{
+        type:Number,
+        required:true,
+    },
+    location:{
+        type:String,
+        required:true,
+    },
+    quota:{
+        type:Number,
         required:true,
     },
     description:{
@@ -45,9 +61,9 @@ const jobSchema= mongoose.Schema({
         trim:true
     },
 },
-    {
-        timestamps:true,
-    })
+{
+    timestamps:true,
+})
 
 const jobs=mongoose.model("jobs",jobSchema);
 

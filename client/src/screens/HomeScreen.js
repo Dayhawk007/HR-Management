@@ -1,6 +1,7 @@
 import Sidebar from "../components/Sidebar";
 import Jobs from "../components/Jobs";
 import JobPage from "../components/jobPage"
+import AddJob from "../components/jobPage/AddJob";
 import Dashboard from "../components/Dashboard";
 import {Routes,Route} from 'react-router-dom';
 const HomeScreen= () =>{
@@ -8,9 +9,10 @@ const HomeScreen= () =>{
         <div className="flex flex-row container">
             <Sidebar/>
             <Routes>
-                <Route path="/jobs" element={<Jobs/>} exact />
                 <Route path="/dashboard" element={<Dashboard/>} exact/>
-                <Route path="/jobs/1" element={<JobPage/>} exact/>
+                <Route path="/jobs" element={<Jobs/>} exact />
+                <Route path="/jobs/createJob" element={<AddJob/>} exact />
+                <Route path="/jobs/:id" element={<JobPage/>}  exact/>
             </Routes>
         </div>
     )

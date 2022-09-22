@@ -11,12 +11,15 @@ const applicationSchema= mongoose.Schema({
     },
     candidateStatus:{
         type: String,
-        enum:["New","Screening","Testing","Interview","Hired","Rejected"],
-        required:true,
+        enum:["New","Screening","Interview","Hired","Rejected"],
         default:"New"
     },
-    detail:{
-        type:String,
-        required:true
+    job:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'jobs'
     }
 })
+
+const applicationModel= mongoose.model("applications",applicationSchema);
+
+export default applicationModel;
