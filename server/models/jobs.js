@@ -28,7 +28,7 @@ const jobSchema= mongoose.Schema({
         trim:true
     },
     applications:[
-        {type: mongoose.Schema.Types.ObjectId,ref:'appplications'}
+        {type: mongoose.Schema.Types.ObjectId,ref:'applications'}
     ],
     datePosted:{
         type:Date,

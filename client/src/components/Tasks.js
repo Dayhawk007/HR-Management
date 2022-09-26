@@ -21,6 +21,26 @@ const Tasks = () => {
                         </div>
                             <FontAwesomeIcon className='' icon={faCheck} />
                     </div>
+                    <div className='flex px-4 py-2 flex-row bg-white rounded-md items-center justify-between'>
+                        <div className='flex flex-row space-x-4'>
+                            <div className="flex flex-row space-x-2 pr-4 items-center text-slate-500 text-sm border-r-2 border-slate-300">
+                                <FontAwesomeIcon icon={faClock}/>
+                                <span>08:00-08:30 AM</span>
+                            </div>
+                            <span>Have a meeting with the team regarding new hires</span>
+                        </div>
+                            <FontAwesomeIcon className='' icon={faCheck} />
+                    </div>
+                    <div className='flex px-4 py-2 flex-row bg-white rounded-md items-center justify-between'>
+                        <div className='flex flex-row space-x-4'>
+                            <div className="flex flex-row space-x-2 pr-4 items-center text-slate-500 text-sm border-r-2 border-slate-300">
+                                <FontAwesomeIcon icon={faClock}/>
+                                <span>10:00-11:00 AM</span>
+                            </div>
+                            <span>Contact new applicants for Internship</span>
+                        </div>
+                            <FontAwesomeIcon className='' icon={faCheck} />
+                    </div>
                 </div>
   )
 }

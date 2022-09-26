@@ -10,6 +10,7 @@ const HomeScreen= () =>{
             <Sidebar/>
             <Routes>
                 <Route path="/dashboard" element={<Dashboard/>} exact/>
+                <Route path="/" element={<Dashboard/>} exact/>
                 <Route path="/jobs" element={<Jobs/>} exact />
                 <Route path="/jobs/createJob" element={<AddJob/>} exact />
                 <Route path="/jobs/:id" element={<JobPage/>}  exact/>

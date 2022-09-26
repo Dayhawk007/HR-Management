@@ -31,6 +31,7 @@ const AddJob = () => {
             description:values.description,
             salary:values.salary,
         });
+        alert("Job added");
         onSubmitProps.resetForm();
     }
   })  

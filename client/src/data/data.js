@@ -7,16 +7,6 @@ export const SidebarData=[
         path:"/dashboard"
     },
     {
-        icon: faInbox,
-        title:"Inbox",
-        path:"/inbox"
-    },
-    {
-        icon: faCalendar,
-        title:"Calender",
-        path:"/calender"
-    },
-    {
         icon: faBriefcase,
         title:"Jobs",
         path:"/jobs"

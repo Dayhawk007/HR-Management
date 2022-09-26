@@ -20,7 +20,7 @@ const Jobs= () => {
             <div className="flex py-3 ml-6 items-center flex-row space-x-3 justify-between text-lg">
                 <span>Active Jobs</span>
                 <div className="flex flex-row py-2 items-center space-x-2 px-4 bg-yellow-300 rounded-full">
-                    <Link to="./createJob">
+                    <Link className="space-x-2" to="./createJob">
                         <span>Add job</span>
                         <FontAwesomeIcon icon={faAdd} />
                     </Link>

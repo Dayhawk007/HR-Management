@@ -14,7 +14,9 @@ const Sidebar = () =>{
         <>
             <div className={`hidden container py-3 space-y-2 px-6  bg-slate-800 text-white md:flex md:w-72 md:h-screen`}>
                 <div className="flex-col">
-                    <img src={Logo} className="w-120 h-36 items-left -ml-8" alt="Logo"></img>
+                    <Link to="/">
+                        <img src={Logo} className="w-120 h-36 items-left -ml-8" alt="Logo"></img>
+                    </Link>
                     <ul className="flex flex-col items-left text-lg space-y-6">
                         {SidebarData.map((item,index)=>{
                             return(

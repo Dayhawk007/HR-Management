@@ -5,7 +5,6 @@ export const jobCreator= async (req,res) =>{
             const{
                 title,
                 designation,
-                numberOfCandidates,
                 typeOfJob,
                 companyName,
                 experience,
@@ -15,10 +14,11 @@ export const jobCreator= async (req,res) =>{
                 salary,
             }=req.body;
             const today=new Date();
+            const currentCandidates=await Job.count();
             const job=await new Job({
                 title,
                 designation,
-                numberOfCandidates,
+                numberOfCandidates:currentCandidates+1,
                 typeOfJob,
                 companyName,
                 datePosted:today,
@@ -52,5 +52,30 @@ export const individualJob = async(req,res) =>{
             "error":error,
         });
     }
-    
+}
+
+export const jobSummary= async (req,res) => {
+    try {
+        const jobs=await Job.find();
+        var design=0,development=0,marketing=0,hr=0;
+        for(var i=0;i<jobs.length;i++){
+            if(jobs[i].designation=="Design"){
+                design++;
+            }
+            else if(jobs[i].designation=="Development"){
+                development++;
+            }
+            else if(jobs[i].designation=="Marketing"){
+                marketing++;
+            }
+            else if(jobs[i].designation=="HR"){
+                hr++;
+            }
+        }
+        res.status(200).json({design,development,marketing,hr});
+    } catch (error) {
+        res.status(500).json({
+            error
+        })
+    }
 }
