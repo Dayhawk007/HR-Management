@@ -37,18 +37,18 @@ export const getAllApplicationsById = async (req, res) => {
         const applications = jobDetailed.applications;
         var nw = [], screen = [], interv = [], hired = [];
 
-        function pushCandidates(status) {
+        function pushCandidates(status, item) {
             const pushObject = {
-                New: () => nw.push(status),
-                Screening: () => screen.push(status),
-                Interview: () => interv.push(status),
-                Hired: () => hired.push(status),
+                New: () => nw.push(item),
+                Screening: () => screen.push(item),
+                Interview: () => interv.push(item),
+                Hired: () => hired.push(item),
             }
             return pushObject[status]();
         }
 
         const countCandi = (item) => {
-            pushCandidates(item.candidateStatus);
+            pushCandidates(item.candidateStatus, item);
         }
 
         applications.forEach(countCandi)
